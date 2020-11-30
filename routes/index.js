@@ -5,5 +5,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+router.post('/submit',function(req,res){
+  console.log(req.body)
+  res.send("Value got it")
+})
 
 module.exports = router;
