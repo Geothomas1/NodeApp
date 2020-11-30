@@ -13,7 +13,7 @@ router.post('/submit',function(req,res){
     if(err)
     console.log("Error")
     else
-    console.log("Database Connected")
+    client.db('nodeapp').collection('user').insertOne(req.body)
   })
   res.send("Value got it")
 })
